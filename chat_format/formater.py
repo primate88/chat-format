@@ -1,26 +1,26 @@
 """Module for formatting chat messages into different formats."""
 from chat_format.formats import chatml, llama2, zephyr
 
-class Format:
-    """Class to format chat messages.
+class Formatter:
+    """Class to format chat messages into specified templates.
 
     Attributes:
         allowed_formats (list of str): Permitted formats for output.
     """
     allowed_formats = ["chatml", "llama2", "zephyr"]
 
-    def __init__(self, format_style="chatml", messages=None, add_assistant_prompt=True):
-        """Initialize the Format class with default values.
+    def __init__(self, template="chatml", messages=None, add_assistant_prompt=True):
+        """Initialize the Formatter class with default values.
 
         Args:
-            format_style (str): The desired output format. Defaults to "chatml".
+            template (str): The desired output template. Defaults to "chatml".
             messages (list of dict): Chat messages to format.
             add_assistant_prompt (bool): Flag to add an assistant prompt. Defaults to True.
 
         Raises:
             ValueError: If add_assistant_prompt is not boolean.
             ValueError: If messages is not a list of dictionaries.
-            ValueError: If format_style is not in the allowed formats.
+            ValueError: If template is not in the allowed formats.
         """
         # Check if add_assistant_prompt is boolean
         if not isinstance(add_assistant_prompt, bool):
@@ -32,12 +32,12 @@ class Format:
            not all(isinstance(message, dict) for message in messages):
             raise ValueError("messages must be a non-empty list of dictionaries")
         
-        # Convert the format_style to lowercase and check if it's allowed
-        format_style = format_style.lower()
-        if format_style not in self.allowed_formats:
-            raise ValueError(f"The format '{format_style}' is not supported. Choose from {self.allowed_formats}")
+        # Convert the template to lowercase and check if it's allowed
+        template = template.lower()
+        if template not in self.allowed_formats:
+            raise ValueError(f"The template '{template}' is not supported. Choose from {self.allowed_formats}")
         
         # Initialize instance variables
-        self.format_style = format_style
+        self.template = template
         self.messages = messages
         self.add_assistant_prompt = add_assistant_prompt
