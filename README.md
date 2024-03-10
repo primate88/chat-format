@@ -13,7 +13,7 @@ A Python library designed to effortlessly format JSON chat data for language mod
 Here's a simple example to get you started with Chat-Format:
 
 ```python
-from chat_format import FormatPrompt
+from chat_format import Format
 
 # Sample chat data
 messages = [
@@ -36,9 +36,9 @@ messages = [
 ]
 
 # Formatting the chat data
-prompt_formatter = FormatPrompt(
+prompt_formatter = Format(
     format="chatml",  # Specify the desired output format
-    messages=messages,
+    messages=messages,  # Pass the chat history
     add_assistant_prompt=True  # Include an additional prompt for the assistant
 )
 
