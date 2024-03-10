@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="PromptRite",
+    name="chat-format",
     version="0.0.1",
     author="Charley Darwinson",
     author_email="primate88@proton.me",
@@ -16,7 +16,3 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    # install_requires=[
-        # "requests>=2.19.1",
-    # ],
-)
