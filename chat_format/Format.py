@@ -7,7 +7,9 @@ class Format:
         if not isinstance(add_assistant_prompt, bool):
             raise ValueError("add_assistant_prompt must be a boolean")
         # Check if messages is a non-empty list of dictionaries
-        if not messages or not isinstance(messages, list) or not all(isinstance(message, dict) for message in messages):
+        if not messages or \
+           not isinstance(messages, list) or \
+           not all(isinstance(message, dict) for message in messages):
             raise ValueError("messages must be a non-empty list of dictionaries")
         # Convert the format to lowercase and check if it's allowed
         format = format.lower()
