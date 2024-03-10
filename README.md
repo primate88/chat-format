@@ -1,12 +1,22 @@
-# chat-format
-A tool to format JSON chat data for language models.
+# Chat-Format
+A Python library designed to effortlessly format JSON chat data for language models, making the development of chat-based applications more intuitive and efficient.
 
-## example usage
+## Features
+- **Flexible Formatting:** Supports various chat data formats, including custom structures, to accommodate different language models.
+- **Easy Integration:** Simplifies the process of preparing chat data for processing by AI models, saving time and reducing errors.
+- **Customizable Outputs:** Offers options to include additional prompts or instructions for the language model, enhancing the quality of interactions.
 
-```
-from chat-template import FormatPrompt
+## Installation
+~~To install the Chat-Format library, run the following command in your terminal: `pip install chat-format`~~
 
-chat = [
+## Quick Start
+Here's a simple example to get you started with Chat-Format:
+
+```python
+from chat_format import FormatPrompt
+
+# Sample chat data
+messages = [
     {
         "role": "system",
         "content": "You are a friendly ChatBot."
@@ -17,7 +27,7 @@ chat = [
     },
     {
         "role": "assistant",
-        "content": "Greetings, primate! How can I help you today?"
+        "content": "Greetings, Talking Monkey! How can I assist you today?"
     },
     {
         "role": "user",
@@ -25,11 +35,21 @@ chat = [
     }
 ]
 
-prompt = FormatPrompt(
-    format="chatml",
+# Formatting the chat data
+prompt_formatter = FormatPrompt(
+    format="chatml",  # Specify the desired output format
     messages=messages,
-    add_assistant_prompt=True
+    add_assistant_prompt=True  # Include an additional prompt for the assistant
 )
 
-print(prompt)
+formatted_prompt = prompt_formatter.format()
+print(formatted_prompt)
 ```
+
+This code snippet demonstrates how to format a series of chat messages for processing by a language model, making it easier to generate responses or analyze conversations.
+
+## Contributing
+If you have suggestions for improvements or bug fixes, please feel free to submit an issue or pull request.
+
+## License
+Chat-Format is released under the MIT License. See [LICENSE](LICENSE) for more information.
