@@ -8,7 +8,7 @@ setup(
     description="A utility to format JSON chat data for LLMs",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/primate88/PromptRite",
+    url="https://github.com/primate88/chat-format",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
