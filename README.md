@@ -52,4 +52,4 @@ This code snippet demonstrates how to format a series of chat messages for proce
 If you have suggestions for improvements or bug fixes, please feel free to submit an issue or pull request.
 
 ## License
-Chat-Format is released under the MIT License. See [LICENSE](LICENSE) for more information.
+Chat-Format is released under the Apache-2.0 License. See [LICENSE](LICENSE) for more information.
