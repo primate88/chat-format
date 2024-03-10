@@ -1,4 +1,5 @@
 """Module for formatting chat messages into different formats."""
+from chat_format.formats import chatml, llama2, zephyr
 
 class Format:
     """Class to format chat messages.
