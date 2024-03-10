@@ -1,4 +1,4 @@
-class PromptRite:
+class chat-format:
     def __init__(self):
         self.templates = {
             "chatml": self._chatml_template,
