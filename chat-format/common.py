@@ -1,4 +1,4 @@
-class chat-format:
+class chat_format:
     def __init__(self):
         self.templates = {
             "chatml": self._chatml_template,
